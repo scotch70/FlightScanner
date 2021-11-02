@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A44D515F27287D27009DC522 /* AirportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44D515E27287D27009DC522 /* AirportView.swift */; };
+		A44D516327287E06009DC522 /* AirlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44D516227287E06009DC522 /* AirlineView.swift */; };
+		A44D51672728844A009DC522 /* AirlineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44D51662728844A009DC522 /* AirlineViewModel.swift */; };
+		A44D516C27288722009DC522 /* AirportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44D516B27288722009DC522 /* AirportViewModel.swift */; };
+		A44D516F272899A1009DC522 /* AirportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44D516E272899A1009DC522 /* AirportDetailView.swift */; };
+		A47D7F12270F75C400931366 /* FlightScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47D7F11270F75C400931366 /* FlightScannerApp.swift */; };
+		A47D7F14270F75C400931366 /* FlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47D7F13270F75C400931366 /* FlightView.swift */; };
+		A47D7F16270F75CE00931366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A47D7F15270F75CE00931366 /* Assets.xcassets */; };
+		A47D7F19270F75CE00931366 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A47D7F18270F75CE00931366 /* Preview Assets.xcassets */; };
+		A47D7F32270F7B0A00931366 /* FlightScannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47D7F31270F7B0A00931366 /* FlightScannerModel.swift */; };
+		A47D7F37270F7BE900931366 /* FlightScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47D7F36270F7BE900931366 /* FlightScannerViewModel.swift */; };
+		A49FE7B12724283F000A2786 /* AirportsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49FE7B02724283E000A2786 /* AirportsModel.swift */; };
+		A49FE7B627245569000A2786 /* AirlinesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49FE7B527245569000A2786 /* AirlinesModel.swift */; };
+		A49FE7BA27245666000A2786 /* AirplaneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49FE7B927245666000A2786 /* AirplaneModel.swift */; };
+		A49FE7BD27245896000A2786 /* CitiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49FE7BC27245896000A2786 /* CitiesModel.swift */; };
+		A49FE7C027245CAC000A2786 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49FE7BF27245CAC000A2786 /* Countries.swift */; };
+		A49FE7C7272464B4000A2786 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49FE7C6272464B4000A2786 /* CountryListView.swift */; };
+		A49FE7CB27287AA6000A2786 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49FE7CA27287AA6000A2786 /* MainView.swift */; };
+		A4EE4BBD2723447A009C857F /* TableCellViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EE4BBC2723447A009C857F /* TableCellViewCell.swift */; };
+		A4EE4BC027234FE7009C857F /* TrackerMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EE4BBF27234FE7009C857F /* TrackerMapView.swift */; };
+		A4F375D4272EE754004C6D78 /* FlightsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F375D3272EE754004C6D78 /* FlightsDetailView.swift */; };
+		A4F375D727301A07004C6D78 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F375D627301A07004C6D78 /* SearchBar.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A44D515E27287D27009DC522 /* AirportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportView.swift; sourceTree = "<group>"; };
+		A44D516227287E06009DC522 /* AirlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineView.swift; sourceTree = "<group>"; };
+		A44D51662728844A009DC522 /* AirlineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineViewModel.swift; sourceTree = "<group>"; };
+		A44D516B27288722009DC522 /* AirportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportViewModel.swift; sourceTree = "<group>"; };
+		A44D516E272899A1009DC522 /* AirportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailView.swift; sourceTree = "<group>"; };
+		A47D7F0E270F75C400931366 /* FlightScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A47D7F11270F75C400931366 /* FlightScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightScannerApp.swift; sourceTree = "<group>"; };
+		A47D7F13270F75C400931366 /* FlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightView.swift; sourceTree = "<group>"; };
+		A47D7F15270F75CE00931366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A47D7F18270F75CE00931366 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A47D7F1A270F75CE00931366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A47D7F31270F7B0A00931366 /* FlightScannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightScannerModel.swift; sourceTree = "<group>"; };
+		A47D7F36270F7BE900931366 /* FlightScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightScannerViewModel.swift; sourceTree = "<group>"; };
+		A49FE7B02724283E000A2786 /* AirportsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsModel.swift; sourceTree = "<group>"; };
+		A49FE7B527245569000A2786 /* AirlinesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesModel.swift; sourceTree = "<group>"; };
+		A49FE7B927245666000A2786 /* AirplaneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirplaneModel.swift; sourceTree = "<group>"; };
+		A49FE7BC27245896000A2786 /* CitiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModel.swift; sourceTree = "<group>"; };
+		A49FE7BF27245CAC000A2786 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
+		A49FE7C6272464B4000A2786 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
+		A49FE7CA27287AA6000A2786 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A4EE4BBC2723447A009C857F /* TableCellViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellViewCell.swift; sourceTree = "<group>"; };
+		A4EE4BBF27234FE7009C857F /* TrackerMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerMapView.swift; sourceTree = "<group>"; };
+		A4F375D3272EE754004C6D78 /* FlightsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsDetailView.swift; sourceTree = "<group>"; };
+		A4F375D627301A07004C6D78 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A47D7F0B270F75C400931366 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A47D7F05270F75C300931366 = {
+			isa = PBXGroup;
+			children = (
+				A47D7F10270F75C400931366 /* FlightScanner */,
+				A47D7F0F270F75C400931366 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A47D7F0F270F75C400931366 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A47D7F0E270F75C400931366 /* FlightScanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A47D7F10270F75C400931366 /* FlightScanner */ = {
+			isa = PBXGroup;
+			children = (
+				A47D7F11270F75C400931366 /* FlightScannerApp.swift */,
+				A47D7F3A270F7C1E00931366 /* View */,
+				A47D7F35270F7BCF00931366 /* ViewModel */,
+				A47D7F30270F7AF600931366 /* Model */,
+				A47D7F15270F75CE00931366 /* Assets.xcassets */,
+				A47D7F1A270F75CE00931366 /* Info.plist */,
+				A47D7F17270F75CE00931366 /* Preview Content */,
+			);
+			path = FlightScanner;
+			sourceTree = "<group>";
+		};
+		A47D7F17270F75CE00931366 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A47D7F18270F75CE00931366 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A47D7F30270F7AF600931366 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A47D7F31270F7B0A00931366 /* FlightScannerModel.swift */,
+				A49FE7B527245569000A2786 /* AirlinesModel.swift */,
+				A49FE7B02724283E000A2786 /* AirportsModel.swift */,
+				A49FE7B927245666000A2786 /* AirplaneModel.swift */,
+				A49FE7BC27245896000A2786 /* CitiesModel.swift */,
+				A49FE7BF27245CAC000A2786 /* Countries.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A47D7F35270F7BCF00931366 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A47D7F36270F7BE900931366 /* FlightScannerViewModel.swift */,
+				A44D51662728844A009DC522 /* AirlineViewModel.swift */,
+				A44D516B27288722009DC522 /* AirportViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A47D7F3A270F7C1E00931366 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A49FE7CA27287AA6000A2786 /* MainView.swift */,
+				A47D7F13270F75C400931366 /* FlightView.swift */,
+				A44D516227287E06009DC522 /* AirlineView.swift */,
+				A44D515E27287D27009DC522 /* AirportView.swift */,
+				A49FE7C6272464B4000A2786 /* CountryListView.swift */,
+				A49FE7B327242A76000A2786 /* Screens */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A49FE7B327242A76000A2786 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A4EE4BBF27234FE7009C857F /* TrackerMapView.swift */,
+				A4EE4BBC2723447A009C857F /* TableCellViewCell.swift */,
+				A44D516E272899A1009DC522 /* AirportDetailView.swift */,
+				A4F375D3272EE754004C6D78 /* FlightsDetailView.swift */,
+				A4F375D627301A07004C6D78 /* SearchBar.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A47D7F0D270F75C400931366 /* FlightScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A47D7F1D270F75CE00931366 /* Build configuration list for PBXNativeTarget "FlightScanner" */;
+			buildPhases = (
+				A47D7F0A270F75C400931366 /* Sources */,
+				A47D7F0B270F75C400931366 /* Frameworks */,
+				A47D7F0C270F75C400931366 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlightScanner;
+			productName = FlightScanner;
+			productReference = A47D7F0E270F75C400931366 /* FlightScanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A47D7F06270F75C300931366 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					A47D7F0D270F75C400931366 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = A47D7F09270F75C300931366 /* Build configuration list for PBXProject "FlightScanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A47D7F05270F75C300931366;
+			productRefGroup = A47D7F0F270F75C400931366 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A47D7F0D270F75C400931366 /* FlightScanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A47D7F0C270F75C400931366 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A47D7F19270F75CE00931366 /* Preview Assets.xcassets in Resources */,
+				A47D7F16270F75CE00931366 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A47D7F0A270F75C400931366 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49FE7C027245CAC000A2786 /* Countries.swift in Sources */,
+				A4F375D4272EE754004C6D78 /* FlightsDetailView.swift in Sources */,
+				A44D51672728844A009DC522 /* AirlineViewModel.swift in Sources */,
+				A49FE7CB27287AA6000A2786 /* MainView.swift in Sources */,
+				A49FE7B12724283F000A2786 /* AirportsModel.swift in Sources */,
+				A44D516C27288722009DC522 /* AirportViewModel.swift in Sources */,
+				A44D516F272899A1009DC522 /* AirportDetailView.swift in Sources */,
+				A4EE4BBD2723447A009C857F /* TableCellViewCell.swift in Sources */,
+				A47D7F32270F7B0A00931366 /* FlightScannerModel.swift in Sources */,
+				A4EE4BC027234FE7009C857F /* TrackerMapView.swift in Sources */,
+				A44D515F27287D27009DC522 /* AirportView.swift in Sources */,
+				A44D516327287E06009DC522 /* AirlineView.swift in Sources */,
+				A49FE7BD27245896000A2786 /* CitiesModel.swift in Sources */,
+				A47D7F14270F75C400931366 /* FlightView.swift in Sources */,
+				A49FE7C7272464B4000A2786 /* CountryListView.swift in Sources */,
+				A47D7F12270F75C400931366 /* FlightScannerApp.swift in Sources */,
+				A49FE7BA27245666000A2786 /* AirplaneModel.swift in Sources */,
+				A4F375D727301A07004C6D78 /* SearchBar.swift in Sources */,
+				A49FE7B627245569000A2786 /* AirlinesModel.swift in Sources */,
+				A47D7F37270F7BE900931366 /* FlightScannerViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A47D7F1B270F75CE00931366 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A47D7F1C270F75CE00931366 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A47D7F1E270F75CE00931366 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FlightScanner/Preview Content\"";
+				DEVELOPMENT_TEAM = 2NC4H8R2UD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FlightScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.appstimize.FlightScanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A47D7F1F270F75CE00931366 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FlightScanner/Preview Content\"";
+				DEVELOPMENT_TEAM = 2NC4H8R2UD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FlightScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.appstimize.FlightScanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A47D7F09270F75C300931366 /* Build configuration list for PBXProject "FlightScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A47D7F1B270F75CE00931366 /* Debug */,
+				A47D7F1C270F75CE00931366 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A47D7F1D270F75CE00931366 /* Build configuration list for PBXNativeTarget "FlightScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A47D7F1E270F75CE00931366 /* Debug */,
+				A47D7F1F270F75CE00931366 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A47D7F06270F75C300931366 /* Project object */;
+}
