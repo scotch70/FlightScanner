@@ -9,32 +9,45 @@ import SwiftUI
 import MapKit
 
 struct FlightsDetailView: View {
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10))
-
-        let annotations = [
-            City(name: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)),
-            City(name: "Paris", coordinate: CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508)),
-            City(name: "Rome", coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5)),
-            City(name: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667))
-        ]
-
+    var flightNumber: String
+    var airlineName: String
+    var departure: String
+    var departureIataCode: String
+    var arrival: String
+    var arrivalIataCode: String
+    var arrivalTime: String
+    var depatureTime: String
+        
         var body: some View {
-            Map(coordinateRegion: $region, annotationItems: annotations) {
-                MapPin(coordinate: $0.coordinate)
+            VStack {
+                Text(flightNumber)
+                Text(airlineName)
+                
+                HStack {
+                    VStack{
+                        Text(departure)
+                        Text(departureIataCode)
+                        Text(depatureTime)
+                    }
+                    
+                    VStack {
+                        Text(arrival)
+                        Text(arrivalIataCode)
+                        Text(arrivalTime)
+                    }
+                }
             }
-            .edgesIgnoringSafeArea(.all)
+            .navigationTitle(flightNumber + "  " + airlineName)
         }
     
 }
 
-struct City: Identifiable {
-    var id = UUID()
-    var name: String
-    var coordinate: CLLocationCoordinate2D
-}
+
 
 struct FlightsDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FlightsDetailView()
+        NavigationView {
+        FlightsDetailView(flightNumber: "HV2022", airlineName: "Transavia", departure: "Amsterdam", departureIataCode: "AMS", arrival: "London Heathrow", arrivalIataCode: "LHR", arrivalTime: "08:00", depatureTime: "08:15")
+        }
     }
 }
