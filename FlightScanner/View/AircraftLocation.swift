@@ -8,15 +8,31 @@
 import SwiftUI
 import MapKit
 
+struct AircraftPosition: Identifiable {
+    var id = UUID()
+    let location: CLLocationCoordinate2D
+    init(id: UUID = UUID(), lat: Double, long: Double) {
+        self.id = id
+        self.location = CLLocationCoordinate2D(latitude: lat, longitude: long)
+    }
+}
+
 struct AircraftLocation: View {
     @StateObject private var aircraftViewModel = AircraftLocationViewModel()
     
+    let aircraftPosition: AircraftPosition
     
     
     var body: some View {
-        Map(coordinateRegion: $aircraftViewModel.region, showsUserLocation: true)
+        Map(coordinateRegion: $aircraftViewModel.region, showsUserLocation: true, annotationItems: [aircraftPosition]) { place in
+            MapAnnotation(coordinate: place.location) {
+                Image(systemName: "airplane")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.red)
+            }
+        }
             .ignoresSafeArea()
-            .accentColor(Color(.systemRed))
             .onAppear {
                 aircraftViewModel.checkIfLocationServicesIsEnabled()
             }
@@ -25,6 +41,6 @@ struct AircraftLocation: View {
 
 struct AircraftLocation_Previews: PreviewProvider {
     static var previews: some View {
-        AircraftLocation()
+        AircraftLocation(aircraftPosition: AircraftPosition(lat: 52.008668, long: 4.978975))
     }
 }
