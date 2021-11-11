@@ -25,11 +25,9 @@ struct AircraftLocation: View {
     
     var body: some View {
         Map(coordinateRegion: $aircraftViewModel.region, showsUserLocation: true, annotationItems: [aircraftPosition]) { place in
-            MapAnnotation(coordinate: place.location) {
+            MapAnnotation(coordinate: MapDetails.startingLocation) {
                 Image(systemName: "airplane")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.red)
+                    .modifier(AirplaneModifier())
             }
         }
             .ignoresSafeArea()

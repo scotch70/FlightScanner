@@ -29,6 +29,7 @@
 		A4EE4BC027234FE7009C857F /* TrackerMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EE4BBF27234FE7009C857F /* TrackerMapView.swift */; };
 		A4F375D4272EE754004C6D78 /* FlightsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F375D3272EE754004C6D78 /* FlightsDetailView.swift */; };
 		A4F375D727301A07004C6D78 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F375D627301A07004C6D78 /* SearchBar.swift */; };
+		F47E956D273D3C48005BEDD3 /* AirplaneModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E956C273D3C48005BEDD3 /* AirplaneModifier.swift */; };
 		F4A3EBE02735503D00AE9095 /* AircraftLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A3EBDF2735503D00AE9095 /* AircraftLocationViewModel.swift */; };
 		F4A3EBE22735508600AE9095 /* AircraftLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A3EBE12735508600AE9095 /* AircraftLocation.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		A4EE4BBF27234FE7009C857F /* TrackerMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerMapView.swift; sourceTree = "<group>"; };
 		A4F375D3272EE754004C6D78 /* FlightsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsDetailView.swift; sourceTree = "<group>"; };
 		A4F375D627301A07004C6D78 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		F47E956C273D3C48005BEDD3 /* AirplaneModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirplaneModifier.swift; sourceTree = "<group>"; };
 		F4A3EBDF2735503D00AE9095 /* AircraftLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftLocationViewModel.swift; sourceTree = "<group>"; };
 		F4A3EBE12735508600AE9095 /* AircraftLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 				A49FE7B527245569000A2786 /* AirlinesModel.swift */,
 				A49FE7B02724283E000A2786 /* AirportsModel.swift */,
 				A49FE7B927245666000A2786 /* AirplaneModel.swift */,
+				F47E956C273D3C48005BEDD3 /* AirplaneModifier.swift */,
 				A49FE7BC27245896000A2786 /* CitiesModel.swift */,
 				A49FE7BF27245CAC000A2786 /* Countries.swift */,
 			);
@@ -250,6 +253,7 @@
 				A49FE7BA27245666000A2786 /* AirplaneModel.swift in Sources */,
 				A4F375D727301A07004C6D78 /* SearchBar.swift in Sources */,
 				A49FE7B627245569000A2786 /* AirlinesModel.swift in Sources */,
+				F47E956D273D3C48005BEDD3 /* AirplaneModifier.swift in Sources */,
 				F4A3EBE02735503D00AE9095 /* AircraftLocationViewModel.swift in Sources */,
 				A47D7F37270F7BE900931366 /* FlightScannerViewModel.swift in Sources */,
 			);
