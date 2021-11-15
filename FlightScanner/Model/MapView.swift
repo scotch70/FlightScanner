@@ -12,11 +12,13 @@ struct MapView: UIViewRepresentable {
 
   let region: MKCoordinateRegion
   let lineCoordinates: [CLLocationCoordinate2D]
+    let compass: Bool
 
   func makeUIView(context: Context) -> MKMapView {
     let mapView = MKMapView()
     mapView.delegate = context.coordinator
     mapView.region = region
+      mapView.showsCompass = compass
 
     let polyline = MKPolyline(coordinates: lineCoordinates, count: lineCoordinates.count)
     mapView.addOverlay(polyline)

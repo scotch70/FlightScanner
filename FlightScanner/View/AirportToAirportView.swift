@@ -32,76 +32,81 @@ struct AirportToAirportView: View {
 //                }
             
 
-                MapView(region: region, lineCoordinates: lineCoordinates)
+                MapView(region: region, lineCoordinates: lineCoordinates, compass: true)
                 Image(systemName: "airplane")
                     .modifier(AirplaneModifier())
                 
-                if showingButtons == false {
-                    Button {
-                        showingButtons = true
-                    } label: {
-                        Image(systemName: "info")
-                            .padding()
-                            .background(Color.green)
-                            .opacity(1)
-                            .foregroundColor(.white)
-                            .cornerRadius(25)
-                            .position(x: 260, y: 665)
-                    }
-                    
-                } else {
-                    Button {
-                        showingButtons = false
-                    } label: {
-                        Image(systemName: "chevron.down.circle")
-                            .padding()
-                            .background(Color.red)
-                            .opacity(1)
-                            .foregroundColor(.white)
-                            .cornerRadius(25)
-                            .position(x: 260, y: 500)
-                    }
-                    
-                    Button {
-                        // Show flight information
-                    } label: {
-                        Text("Flight info")
-                            .padding()
-                            .background(Color.secondary)
-                            .foregroundColor(.white)
-                            .cornerRadius(25)
-                            .position(x: 260, y: 555)
-                    }
-                    
-                    Button {
-                        // Show Airline information
-                    } label: {
-                        Text("Airline info")
-                            .padding()
-                            .background(Color.secondary)
-                            .foregroundColor(.white)
-                            .cornerRadius(25)
-                            .position(x: 260, y: 610)
-                    }
-                    
-                    Button {
-                        // Show Airport information
-                    } label: {
-                        Text("Airport info")
-                            .padding()
-                            .background(Color.secondary)
-                            .foregroundColor(.white)
-                            .cornerRadius(25)
-                            .position(x: 260, y: 665)
-                    }
-                }
-                
-                Text("Arriving in \(flightTime) hours.")
-                    .padding()
-                    .background(Color.secondary)
-                    .foregroundColor(.white)
-                    .cornerRadius(25)
-                    .position(x: 260, y: 720)
+                VStack {
+                                    Spacer()
+                                    VStack(alignment: .trailing) {
+                                    if showingButtons == false {
+                                        Button {
+                                            showingButtons = true
+                                        } label: {
+                                            Image(systemName: "info")
+                                                .padding()
+                                                .background(Color.green)
+                                                .opacity(1)
+                                                .foregroundColor(.white)
+                                                .cornerRadius(25)
+                                                
+                                        }
+                                        
+                                    } else {
+                                        Button {
+                                            showingButtons = false
+                                        } label: {
+                                            Image(systemName: "chevron.down.circle")
+                                                .padding()
+                                                .background(Color.red)
+                                                .opacity(1)
+                                                .foregroundColor(.white)
+                                                .cornerRadius(25)
+                                                
+                                        }
+                                        
+                                        Button {
+                                            // Show flight information
+                                        } label: {
+                                            Text("Flight info")
+                                                .padding()
+                                                .background(Color.secondary)
+                                                .foregroundColor(.white)
+                                                .cornerRadius(25)
+                                                
+                                        }
+                                        
+                                        Button {
+                                            // Show Airline information
+                                        } label: {
+                                            Text("Airline info")
+                                                .padding()
+                                                .background(Color.secondary)
+                                                .foregroundColor(.white)
+                                                .cornerRadius(25)
+                                                
+                                        }
+                                        
+                                        Button {
+                                            // Show Airport information
+                                        } label: {
+                                            Text("Airport info")
+                                                .padding()
+                                                .background(Color.secondary)
+                                                .foregroundColor(.white)
+                                                .cornerRadius(25)
+                                                
+                                        }
+                                       
+                                    }
+                                    Text("Arriving in \(flightTime, specifier: "%.2f")h")
+                                        .padding()
+                                        .background(Color.secondary)
+                                        .foregroundColor(.white)
+                                        .cornerRadius(25)
+                                    
+                                }
+                                }.padding(.bottom)
             }
         .edgesIgnoringSafeArea(.all)
     }
