@@ -32,7 +32,7 @@ struct AirportToAirportView: View {
 //                }
             
 
-                MapView(region: region, lineCoordinates: lineCoordinates, compass: true)
+                MapView(region: region, lineCoordinates: lineCoordinates)
                 Image(systemName: "airplane")
                     .modifier(AirplaneModifier())
                 
