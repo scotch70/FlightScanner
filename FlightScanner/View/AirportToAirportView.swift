@@ -49,6 +49,7 @@ struct AirportToAirportView: View {
                                                 .opacity(1)
                                                 .foregroundColor(.white)
                                                 .cornerRadius(25)
+                                                .padding(.horizontal)
                                                 
                                         }
                                         
@@ -62,6 +63,8 @@ struct AirportToAirportView: View {
                                                 .opacity(1)
                                                 .foregroundColor(.white)
                                                 .cornerRadius(25)
+                                                .padding(.horizontal)
+
                                                 
                                         }
                                         
@@ -73,6 +76,8 @@ struct AirportToAirportView: View {
                                                 .background(Color.secondary)
                                                 .foregroundColor(.white)
                                                 .cornerRadius(25)
+                                                .padding(.horizontal)
+
                                                 
                                         }
                                         
@@ -84,6 +89,8 @@ struct AirportToAirportView: View {
                                                 .background(Color.secondary)
                                                 .foregroundColor(.white)
                                                 .cornerRadius(25)
+                                                .padding(.horizontal)
+
                                                 
                                         }
                                         
@@ -95,17 +102,22 @@ struct AirportToAirportView: View {
                                                 .background(Color.secondary)
                                                 .foregroundColor(.white)
                                                 .cornerRadius(25)
+                                                .padding(.horizontal)
                                                 
                                         }
                                        
                                     }
+                                        HStack {
+                                            Spacer()
                                     Text("Arriving in \(flightTime, specifier: "%.2f")h")
                                         .padding()
                                         .background(Color.secondary)
                                         .foregroundColor(.white)
                                         .cornerRadius(25)
+                                        .padding(.horizontal)
                                     
                                 }
+                                    }
                                 }.padding(.bottom)
             }
         .edgesIgnoringSafeArea(.all)
