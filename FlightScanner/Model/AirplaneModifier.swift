@@ -6,14 +6,22 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct AirplaneModifier: ViewModifier {
+    @State private var lineCoordinates = [
+        MapDetails.startingLocation,
+        MapDetails.endLocation
+    ]
+    @State private var region = MKCoordinateRegion(center: MapDetails.startingLocation, span: MapDetails.defaultSpan
+    )
+    
     func body(content: Content) -> some View {
         Image(systemName: "airplane")
             .resizable()
             .frame(width: 30, height: 30)
             .foregroundColor(.red)
-            .rotationEffect(.degrees(rotateAirplaneTo(direction: .northWest)))
+            .rotationEffect(.degrees(rotateAirplaneTo(direction: .east)))
     }
     
     enum AirplaneEffect {

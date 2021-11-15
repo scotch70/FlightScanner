@@ -8,8 +8,9 @@
 import MapKit
 
 enum MapDetails {
-    static let startingLocation = CLLocationCoordinate2D(latitude: 52.008668, longitude: 4.978975)
-    static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+    static let startingLocation = CLLocationCoordinate2D(latitude: 52.308056, longitude: 4.764167) // schiphol
+    static let endLocation = CLLocationCoordinate2D(latitude: 41.2974, longitude:  2.0833) // BCN El Prat
+    static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)
 }
 
 final class AircraftLocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
