@@ -19,11 +19,12 @@ struct MapView: UIViewRepresentable {
     mapView.delegate = context.coordinator
     mapView.region = region
     mapView.showsCompass = true
+    mapView.isRotateEnabled = false
       
-      let compass = MKCompassButton(mapView: mapView)
-      compass.frame.origin = CGPoint(x: 20, y: 20)
-      compass.compassVisibility = .visible
-      mapView.addSubview(compass)
+    let compass = MKCompassButton(mapView: mapView)
+    compass.frame.origin = CGPoint(x: 20, y: 20)
+    compass.compassVisibility = .visible
+    mapView.addSubview(compass)
 
     let polyline = MKPolyline(coordinates: lineCoordinates, count: lineCoordinates.count)
     mapView.addOverlay(polyline)

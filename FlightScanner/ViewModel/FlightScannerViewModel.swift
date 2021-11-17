@@ -11,7 +11,7 @@ import Combine
 
 class FlightScannerViewModel: ObservableObject {
     @Published var flights: [FlightData] = []
-    @Published var allData = data
+    
     
     let api = "http://api.aviationstack.com/v1/"
     static let data = ["flights", "airports", "airlines", "airplanes", "cities", "countries"]

@@ -23,7 +23,7 @@ struct MainView: View {
                     Label("Airport", systemImage: "mappin.and.ellipse")
                 }
             
-            CountryListView()
+            UserSettingsView()
                 .tabItem {
                     Label("Counrty", systemImage: "map")
                 }
