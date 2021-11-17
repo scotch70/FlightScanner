@@ -12,6 +12,7 @@ struct FlightView: View {
     @StateObject var viewModel = FlightScannerViewModel()
     @State private var searchText = ""
     @State private var searching = false
+    @State private var test = true
     
     var body: some View {
         NavigationView {
