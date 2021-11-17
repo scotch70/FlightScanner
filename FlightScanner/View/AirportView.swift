@@ -11,7 +11,6 @@ struct AirportView: View {
     @StateObject var airportViewModel = AirportViewModel()
     
     var body: some View {
-        NavigationView {
             List {
                 Section(header: Text("Airports")) {
                     ForEach(airportViewModel.airports) { item in
@@ -21,7 +20,6 @@ struct AirportView: View {
                             }
                         }
                     }
-                }
                     
             }
             .listStyle(GroupedListStyle())

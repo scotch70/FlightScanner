@@ -28,6 +28,7 @@ struct MainView: View {
                     Label("Counrty", systemImage: "map")
                 }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

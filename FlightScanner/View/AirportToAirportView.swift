@@ -120,13 +120,16 @@ struct AirportToAirportView: View {
                                     }
                                 }.padding(.bottom)
             }
+            
         .edgesIgnoringSafeArea(.all)
     }
+    .navigationViewStyle(StackNavigationViewStyle())
   }
 }
 
 struct AirportToAirportView_Previews: PreviewProvider {
     static var previews: some View {
         AirportToAirportView(flightTime: 2.05, aircraftPosition: AircraftPosition(lat: 52.308056, long: 4.764167))
+            
     }
 }

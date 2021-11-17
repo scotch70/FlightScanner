@@ -27,8 +27,10 @@ struct FlightView: View {
                     }
                     .listStyle(GroupedListStyle())
                 }
+                .navigationViewStyle(StackNavigationViewStyle())
                 .navigationBarTitle("Flight Scanner")
                 .navigationBarTitleDisplayMode(.inline)
+                
                 .toolbar {
                     if searching {
                         Button("Cancel") {

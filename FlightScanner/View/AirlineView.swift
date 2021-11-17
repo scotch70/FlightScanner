@@ -11,20 +11,22 @@ struct AirlineView: View {
     @StateObject var airlineViewModel = AirlineViewModel()
     
     var body: some View {
-        NavigationView {
-            List {
-                Section(header: Text("Airline")) {
-                    ForEach(airlineViewModel.airlines) { item in
-                        ForEach(item.data) { ita in
-                            Text(ita.airlineName)
-                        }
+        
+        List {
+            Section(header: Text("Airline")) {
+                ForEach(airlineViewModel.airlines) { item in
+                    ForEach(item.data) { ita in
+                        Text(ita.airlineName)
                     }
                 }
-                    
             }
+            
+            
             .listStyle(GroupedListStyle())
+            
             .navigationBarTitle("Airline")
             .navigationBarTitleDisplayMode(.inline)
+            
         }
     }
 }
