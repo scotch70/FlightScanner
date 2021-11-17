@@ -14,6 +14,11 @@ struct PathView: View {
     var arrivalAirport: String
     var departureAirport: String
     
+    var flightTimeDouble: Double {
+        let flyTime = Double(flightTime)
+        return flyTime ?? 0.0
+    }
+    
     var body: some View {
         ZStack(alignment: .topLeading) {
             
@@ -37,7 +42,7 @@ struct PathView: View {
                 .frame(width: 30, height: 30).offset(x: -17, y: -17)
                 .modifier(FollowEffect(pct: self.flag ? 1 : 0, path: InfinityShape.createInfinityPath(in: CGRect(x: 0, y: 0, width: universalSize, height: 300)), rotate: true))
                 .onAppear {
-                    withAnimation(Animation.linear(duration: 5.0).repeatCount(1,autoreverses: false)) {
+                    withAnimation(Animation.linear(duration: flightTimeDouble).repeatCount(1,autoreverses: false)) {
                         self.flag.toggle()
                     }
                 }
