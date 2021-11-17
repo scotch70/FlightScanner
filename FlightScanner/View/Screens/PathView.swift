@@ -18,6 +18,13 @@ struct PathView: View {
         let flyTime = Double(flightTime)
         return flyTime ?? 0.0
     }
+       
+    var actualFlightTime: Double {
+        let oneHour = 3600.0
+        let flyTime = flightTimeDouble
+        let sum = oneHour * flyTime
+        return sum
+    }
     
     var body: some View {
         ZStack(alignment: .topLeading) {
@@ -28,7 +35,7 @@ struct PathView: View {
                 .overlay(
                     HStack(spacing: 50) {
                         Text(departureAirport)
-                        Text(flightTime)
+                        Text("\(flightTime)h")
                             .foregroundColor(.blue)
                         Text(arrivalAirport)
                     })
@@ -42,7 +49,7 @@ struct PathView: View {
                 .frame(width: 30, height: 30).offset(x: -17, y: -17)
                 .modifier(FollowEffect(pct: self.flag ? 1 : 0, path: InfinityShape.createInfinityPath(in: CGRect(x: 0, y: 0, width: universalSize, height: 300)), rotate: true))
                 .onAppear {
-                    withAnimation(Animation.linear(duration: flightTimeDouble).repeatCount(1,autoreverses: false)) {
+                    withAnimation(Animation.linear(duration: actualFlightTime).repeatCount(1,autoreverses: false)) {
                         self.flag.toggle()
                     }
                 }
@@ -58,7 +65,7 @@ struct PathView: View {
 
 struct PathView_Previews: PreviewProvider {
     static var previews: some View {
-        PathView(flag: false, flightTime: "2:15h", arrivalAirport: "Barcelona", departureAirport: "Amsterdam")
+        PathView(flag: false, flightTime: "2.15", arrivalAirport: "Barcelona", departureAirport: "Amsterdam")
     }
 }
 
