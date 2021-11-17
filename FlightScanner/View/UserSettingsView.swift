@@ -24,7 +24,7 @@ struct UserSettingsView: View {
                 }
             }
             .listStyle(InsetListStyle())
-            PathView(flag: false, flightTime: "2:05")
+            PathView(flag: false, flightTime: "2:05", arrivalAirport: "Amsterdam", departureAirport: "Barcelona")
         }
     }
 }

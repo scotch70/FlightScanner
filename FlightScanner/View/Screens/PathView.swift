@@ -11,6 +11,8 @@ struct PathView: View {
     let universalSize = UIScreen.main.bounds.width
     @State var flag: Bool
     var flightTime: String
+    var arrivalAirport: String
+    var departureAirport: String
     
     var body: some View {
         ZStack(alignment: .topLeading) {
@@ -18,7 +20,14 @@ struct PathView: View {
             // Draw the Infinity Shape
             InfinityShape().stroke(Color.black, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .miter, miterLimit: 0, dash: [7, 7], dashPhase: 0))
                 .foregroundColor(.blue)
-                .overlay(Text(flightTime), alignment: .center)
+                .overlay(
+                    HStack(spacing: 50) {
+                        Text(departureAirport)
+                        Text(flightTime)
+                            .foregroundColor(.blue)
+                        Text(arrivalAirport)
+                    })
+                    
                 .frame(width: universalSize, height: 300)
             
             
@@ -44,7 +53,7 @@ struct PathView: View {
 
 struct PathView_Previews: PreviewProvider {
     static var previews: some View {
-        PathView(flag: false, flightTime: "2:15h")
+        PathView(flag: false, flightTime: "2:15h", arrivalAirport: "Barcelona", departureAirport: "Amsterdam")
     }
 }
 

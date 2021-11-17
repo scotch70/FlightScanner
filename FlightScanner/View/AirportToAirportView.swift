@@ -68,9 +68,7 @@ struct AirportToAirportView: View {
                                                 
                                         }
                                         
-                                        Button {
-                                            // Show flight information
-                                        } label: {
+                                        NavigationLink(destination: FlightInfo(arrivalAirport: "Amsterdam", departureAirport: "Barcelona", flightTime: "2:05", airline: "Transavia")) {
                                             Text("Flight info")
                                                 .padding()
                                                 .background(Color.secondary)
@@ -81,9 +79,7 @@ struct AirportToAirportView: View {
                                                 
                                         }
                                         
-                                        Button {
-                                            // Show Airline information
-                                        } label: {
+                                        NavigationLink(destination: AirlineView()) {
                                             Text("Airline info")
                                                 .padding()
                                                 .background(Color.secondary)
@@ -94,9 +90,7 @@ struct AirportToAirportView: View {
                                                 
                                         }
                                         
-                                        Button {
-                                            // Show Airport information
-                                        } label: {
+                                        NavigationLink(destination: AirportView()){
                                             Text("Airport info")
                                                 .padding()
                                                 .background(Color.secondary)
@@ -129,7 +123,9 @@ struct AirportToAirportView: View {
 
 struct AirportToAirportView_Previews: PreviewProvider {
     static var previews: some View {
+        NavigationView {
         AirportToAirportView(flightTime: 2.05, aircraftPosition: AircraftPosition(lat: 52.308056, long: 4.764167))
+        }
             
     }
 }
