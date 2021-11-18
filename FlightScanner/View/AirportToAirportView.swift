@@ -12,6 +12,10 @@ struct AirportToAirportView: View {
     @State private var region = MKCoordinateRegion(center: MapDetails.startingLocation, span: MapDetails.defaultSpan
     )
     @StateObject private var aircraftViewModel = AircraftLocationViewModel()
+    
+    @State var requestLocation = CLLocationCoordinate2D(latitude: 52.308056, longitude:  4.764167)
+    @State var destinationLocation = CLLocationCoordinate2D(latitude: 41.2974, longitude: 2.0833)
+    
     var flightTime: Double
     let aircraftPosition: AircraftPosition
     @State private var showingButtons = false
@@ -31,10 +35,10 @@ struct AirportToAirportView: View {
 //                    }
 //                }
             
-
-                MapView(region: region, lineCoordinates: lineCoordinates)
-                Image(systemName: "airplane")
-                    .modifier(AirplaneModifier())
+                MapView(region: region, requestLocation: $requestLocation, destinationLocation: $destinationLocation, lineCoordinates: lineCoordinates)
+                
+                
+               
                 
                 VStack {
                                     Spacer()

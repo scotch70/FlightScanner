@@ -11,6 +11,10 @@ import MapKit
 struct MapView: UIViewRepresentable {
 
   let region: MKCoordinateRegion
+    
+    @Binding var requestLocation: CLLocationCoordinate2D
+    @Binding var destinationLocation: CLLocationCoordinate2D
+    
   let lineCoordinates: [CLLocationCoordinate2D]
   
 
@@ -27,6 +31,12 @@ struct MapView: UIViewRepresentable {
     mapView.addSubview(compass)
 
     let polyline = MKPolyline(coordinates: lineCoordinates, count: lineCoordinates.count)
+    
+    let annotation = MKPointAnnotation()
+    annotation.coordinate = requestLocation
+    annotation.title = NSLocalizedString("Plane", comment: "Plane marker")
+    
+    mapView.addAnnotation(annotation)
     mapView.addOverlay(polyline)
 
     return mapView
@@ -56,4 +66,32 @@ class Coordinator: NSObject, MKMapViewDelegate {
     }
     return MKOverlayRenderer()
   }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let planeIdentifier = "Plane"
+        
+        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: planeIdentifier)
+                ?? MKAnnotationView(annotation: annotation, reuseIdentifier: planeIdentifier)
+        
+       
+        
+        annotationView.image = UIImage(systemName: "airplane")
+        annotationView.transform = mapView.transform.rotated(by: CGFloat(degreesToRadians(degrees: 0)))
+        
+       
+        return annotationView
+    }
+    private func directionBetweenPoints(sourcePoint: MKMapPoint, _ destinationPoint: MKMapPoint) -> CLLocationDirection {
+        let x = destinationPoint.x - sourcePoint.x
+        let y = destinationPoint.y - sourcePoint.y
+        
+        return radiansToDegrees(radians: (atan2(y, x)).truncatingRemainder(dividingBy: 450))
+    }
+    private func radiansToDegrees(radians: Double) -> Double {
+        return radians * 180 / .pi
+    }
+
+    private func degreesToRadians(degrees: Double) -> Double {
+        return degrees * .pi / 180
+    }
 }
