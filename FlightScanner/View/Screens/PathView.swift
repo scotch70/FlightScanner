@@ -14,6 +14,7 @@ struct PathView: View {
     var arrivalAirport: String
     var departureAirport: String
     
+    
     var flightTimeDouble: Double {
         let flyTime = Double(flightTime)
         return flyTime ?? 0.0
@@ -28,16 +29,18 @@ struct PathView: View {
     
     var body: some View {
         ZStack(alignment: .topLeading) {
-            
             // Draw the Infinity Shape
             InfinityShape().stroke(Color.black, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .miter, miterLimit: 0, dash: [7, 7], dashPhase: 0))
                 .foregroundColor(.blue)
                 .overlay(
+                    VStack {
+                        Text("")
                     HStack(spacing: 50) {
                         Text(departureAirport)
                         Text("\(flightTime)h")
                             .foregroundColor(.blue)
                         Text(arrivalAirport)
+                    }
                     })
                     
                 .frame(width: universalSize, height: 300)
@@ -57,7 +60,6 @@ struct PathView: View {
         }.frame(alignment: .topLeading)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .edgesIgnoringSafeArea(.all)
-        
         
     }
 }
@@ -115,6 +117,7 @@ struct FollowEffect: GeometryEffect {
         return CGPoint(x: tp.boundingRect.midX, y: tp.boundingRect.midY)
     }
 }
+    
 
 struct InfinityShape: Shape {
     func path(in rect: CGRect) -> Path {

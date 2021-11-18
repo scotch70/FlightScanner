@@ -25,8 +25,6 @@ struct FlightInfo: View {
                 
             }
           
-            
-            
         PathView(flag: false, flightTime: flightTime, arrivalAirport: arrivalAirport, departureAirport: departureAirport)
         
         }
