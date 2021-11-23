@@ -14,7 +14,6 @@ struct PathView: View {
     var arrivalAirport: String
     var departureAirport: String
     
-    
     var flightTimeDouble: Double {
         let flyTime = Double(flightTime)
         return flyTime ?? 0.0
@@ -63,7 +62,6 @@ struct PathView: View {
         
     }
 }
-
 
 struct PathView_Previews: PreviewProvider {
     static var previews: some View {

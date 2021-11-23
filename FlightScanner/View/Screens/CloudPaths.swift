@@ -11,50 +11,55 @@ struct CloudPaths: View {
     let universalSize = UIScreen.main.bounds.width
     @State var flag: Bool
     var body: some View {
-        ZStack(alignment: .top) {
-            Image(systemName: "sun.max.fill")
-                .resizable()
-                .foregroundColor(.yellow)
-                .frame(width: 100, height: 100)
-                .padding()
-            
-            CloudPath()
-                .stroke(.blue, lineWidth: 10)
-            
-            CloudPathTwo()
-                .stroke(.blue, lineWidth: 10)
-            
-            CloudPathThree()
-                .stroke(.blue, lineWidth: 10)
-            
-            Image(systemName: "cloud.fill").resizable().foregroundColor(Color.white)
+        if #available(iOS 15.0, *) {
+            ZStack(alignment: .top) {
+                Image(systemName: "sun.max.fill")
+                    .resizable()
+                    .foregroundColor(.yellow)
+                    .frame(width: 100, height: 100)
+                    .padding()
+                
+                CloudPath()
+                    .stroke(.blue, lineWidth: 10)
+                
+                CloudPathTwo()
+                    .stroke(.blue, lineWidth: 10)
+                
+                CloudPathThree()
+                    .stroke(.blue, lineWidth: 10)
+                
+                Image(systemName: "cloud.fill").resizable().foregroundColor(Color.white)
                     .frame(width: 30, height: 30).offset(x: -17, y: -17)
-                        .modifier(FollowEffectTwo(pct: self.flag ? 1 : 0, path: CloudPath.createCloudPath(in: CGRect(x: 0, y: 0, width: universalSize, height: 300)), rotate: false))
-                         .onAppear {
-                             withAnimation(Animation.linear(duration: 10).delay(10).repeatForever( autoreverses: false)) {
-                                  self.flag.toggle()
-                             }
-                         }
-            
-            Image(systemName: "cloud.fill").resizable().foregroundColor(Color.white)
+                    .modifier(FollowEffectTwo(pct: self.flag ? 1 : 0, path: CloudPath.createCloudPath(in: CGRect(x: 0, y: 0, width: universalSize, height: 300)), rotate: false))
+                    .onAppear {
+                        withAnimation(Animation.linear(duration: 10).delay(10).repeatForever( autoreverses: false)) {
+                            self.flag.toggle()
+                        }
+                    }
+                
+                Image(systemName: "cloud.fill").resizable().foregroundColor(Color.white)
                     .frame(width: 30, height: 30).offset(x: -17, y: -17)
-                        .modifier(FollowEffectTwo(pct: self.flag ? 1 : 0, path: CloudPathTwo.createCloudPath(in: CGRect(x: 0, y: 0, width: universalSize, height: 300)), rotate: false))
-                         .onAppear {
-                             withAnimation(Animation.linear(duration: 15).delay(7).repeatForever( autoreverses: false)) {
-                                  self.flag.toggle()
-                             }
-                         }
-            
-            Image(systemName: "cloud.fill").resizable().foregroundColor(Color.white)
+                    .modifier(FollowEffectTwo(pct: self.flag ? 1 : 0, path: CloudPathTwo.createCloudPath(in: CGRect(x: 0, y: 0, width: universalSize, height: 300)), rotate: false))
+                    .onAppear {
+                        withAnimation(Animation.linear(duration: 15).delay(7).repeatForever( autoreverses: false)) {
+                            self.flag.toggle()
+                        }
+                    }
+                
+                Image(systemName: "cloud.fill").resizable().foregroundColor(Color.white)
                     .frame(width: 30, height: 30).offset(x: -17, y: -17)
-                        .modifier(FollowEffectTwo(pct: self.flag ? 1 : 0, path: CloudPathThree.createCloudPath(in: CGRect(x: 0, y: 0, width: universalSize, height: 300)), rotate: false))
-                         .onAppear {
-                             withAnimation(Animation.linear(duration: 12).delay(18).repeatForever( autoreverses: false)) {
-                                  self.flag.toggle()
-                             }
-                         }
+                    .modifier(FollowEffectTwo(pct: self.flag ? 1 : 0, path: CloudPathThree.createCloudPath(in: CGRect(x: 0, y: 0, width: universalSize, height: 300)), rotate: false))
+                    .onAppear {
+                        withAnimation(Animation.linear(duration: 12).delay(18).repeatForever( autoreverses: false)) {
+                            self.flag.toggle()
+                        }
+                    }
+            }
+            .background(Color.cyan)
+        } else {
+            
+            Color.blue
         }
-        .background(Color.blue)
     }
 }
 
