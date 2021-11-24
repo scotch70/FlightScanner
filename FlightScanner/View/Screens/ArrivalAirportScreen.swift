@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct ArrivalAirportScreen: View {
-    var airport = AirportArrival(runways: [Runways(runway: "07L/25R", length: "3743")], city: "Barcelona", airportName: "El Prat", iataCode: "BCN", country: "Spain", numberOfRunways: 3)
+//    var airport = AirportArrival(runways: [Runways(runway: "07L/25R", length: "3743")], city: "Barcelona", airportName: "El Prat", iataCode: "BCN", country: "Spain", numberOfRunways: 3)
+    // overbodig?
+    
+    var city: String
+    var airportName: String
+    var iataCode: String
+    var country: String
+    var numberOfRunways: Int
     
     var runway = [
         Runways(runway: "02/20", length: "2528m"),
@@ -21,15 +28,15 @@ struct ArrivalAirportScreen: View {
             VStack {
                 Text("Inbound airport information")
                     .padding(.horizontal)
-                    .background(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .font(.title2)
+                    .foregroundColor(.white)
                 
                 HStack {
                     VStack(alignment: .leading) {
-                        Text(airport.iataCode)
-                        Text(airport.airportName)
-                        Text(airport.city)
-                        Text(airport.country)
+                        Text(iataCode)
+                        Text(airportName)
+                        Text(city)
+                        Text(country)
                     }
                     .padding()
                     .frame(width: 170, height: 100)
@@ -41,16 +48,19 @@ struct ArrivalAirportScreen: View {
                     Image(systemName: "airplane.arrival")
                         .resizable()
                         .scaledToFit()
+                        .foregroundColor(.white)
                         .frame(width: 50, height: 50)
                 }
                     
                     VStack {
-                        if airport.numberOfRunways < 1 || airport.numberOfRunways == 1 {
-                            Text("\(airport.numberOfRunways) runway")
-                                .foregroundColor(.blue)
+                        if numberOfRunways < 1 || numberOfRunways == 1 {
+                            Text("\(numberOfRunways) runway")
+                                .font(.title2)
+                                .foregroundColor(.white)
                         } else {
-                            Text("\(airport.numberOfRunways) runways")
-                                .foregroundColor(.blue)
+                            Text("\(numberOfRunways) runways")
+                                .font(.title2)
+                                .foregroundColor(.white)
                         }
                         ScrollView(.horizontal) {
                             HStack(alignment: .center, spacing: 20) {
@@ -63,7 +73,7 @@ struct ArrivalAirportScreen: View {
                                     .padding()
                                     .foregroundColor(.black)
                                     .frame(width: 100, height: 75)
-                                    .background(Color.secondary)
+                                    .background(Color.white)
                                     .cornerRadius(12)
                                 }
                         
@@ -72,7 +82,6 @@ struct ArrivalAirportScreen: View {
                     }
                     .padding()
                     .frame(width: 320, height: 120)
-                    .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     
                 
@@ -86,6 +95,6 @@ struct ArrivalAirportScreen: View {
 
 struct ArrivalAirportScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ArrivalAirportScreen()
+        ArrivalAirportScreen(city: "Barcelona", airportName: "El Prat", iataCode: "BCN", country: "Spain", numberOfRunways: 3)
     }
 }

@@ -23,25 +23,25 @@ struct Runways: Identifiable {
     var runway: String
     var length: String
 }
-struct AirportDeparture {
-    var runways: [Runways]
-    var airport = AirportViewModel()
-    var city: String
-    var airportName: String
-    var iataCode: String
-    var country: String
-    var numberOfRunways: Int
-}
-
-struct AirportArrival {
-    var runways: [Runways]
-    var airport = AirportViewModel()
-    var city: String
-    var airportName: String
-    var iataCode: String
-    var country: String
-    var numberOfRunways: Int
-}
+//struct AirportDeparture {
+//    var runways: [Runways]
+//    var airport = AirportViewModel()
+//    var city: String
+//    var airportName: String
+//    var iataCode: String
+//    var country: String
+//    var numberOfRunways: Int
+//}
+//zijn deze overbodig??????
+//struct AirportArrival {
+//    var runways: [Runways]
+//    var airport = AirportViewModel()
+//    var city: String
+//    var airportName: String
+//    var iataCode: String
+//    var country: String
+//    var numberOfRunways: Int
+//}
 
 // MARK: - Datum
 struct AirportData: Identifiable, Codable {
