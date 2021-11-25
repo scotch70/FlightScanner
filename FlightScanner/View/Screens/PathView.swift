@@ -14,18 +14,32 @@ struct PathView: View {
     var arrivalAirport: String
     var departureAirport: String
     
+    var flightTimeDouble: Double {
+        let flyTime = Double(flightTime)
+        return flyTime ?? 0.0
+    }
+       
+    var actualFlightTime: Double {
+        let oneHour = 3600.0
+        let flyTime = flightTimeDouble
+        let sum = oneHour * flyTime
+        return sum
+    }
+    
     var body: some View {
         ZStack(alignment: .topLeading) {
-            
             // Draw the Infinity Shape
             InfinityShape().stroke(Color.black, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .miter, miterLimit: 0, dash: [7, 7], dashPhase: 0))
                 .foregroundColor(.blue)
                 .overlay(
+                    VStack {
+                        Text("")
                     HStack(spacing: 50) {
                         Text(departureAirport)
-                        Text(flightTime)
+                        Text("\(flightTime)h")
                             .foregroundColor(.blue)
                         Text(arrivalAirport)
+                    }
                     })
                     
                 .frame(width: universalSize, height: 300)
@@ -37,7 +51,7 @@ struct PathView: View {
                 .frame(width: 30, height: 30).offset(x: -17, y: -17)
                 .modifier(FollowEffect(pct: self.flag ? 1 : 0, path: InfinityShape.createInfinityPath(in: CGRect(x: 0, y: 0, width: universalSize, height: 300)), rotate: true))
                 .onAppear {
-                    withAnimation(Animation.linear(duration: 5.0).repeatCount(1,autoreverses: false)) {
+                    withAnimation(Animation.linear(duration: actualFlightTime).repeatCount(1,autoreverses: false)) {
                         self.flag.toggle()
                     }
                 }
@@ -46,14 +60,12 @@ struct PathView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .edgesIgnoringSafeArea(.all)
         
-        
     }
 }
 
-
 struct PathView_Previews: PreviewProvider {
     static var previews: some View {
-        PathView(flag: false, flightTime: "2:15h", arrivalAirport: "Barcelona", departureAirport: "Amsterdam")
+        PathView(flag: false, flightTime: "2.15", arrivalAirport: "Barcelona", departureAirport: "Amsterdam")
     }
 }
 
@@ -103,6 +115,7 @@ struct FollowEffect: GeometryEffect {
         return CGPoint(x: tp.boundingRect.midX, y: tp.boundingRect.midY)
     }
 }
+    
 
 struct InfinityShape: Shape {
     func path(in rect: CGRect) -> Path {

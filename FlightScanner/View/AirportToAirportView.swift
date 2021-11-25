@@ -72,7 +72,7 @@ struct AirportToAirportView: View {
                                                 
                                         }
                                         
-                                        NavigationLink(destination: FlightInfo(arrivalAirport: "Amsterdam", departureAirport: "Barcelona", flightTime: "2:05", airline: "Transavia")) {
+                                        NavigationLink(destination: FlightInfo(flightNumber: "HV2022", arrivalAirport: "Barcelona", arrivalIataCode: "BCN", departureIataCode: "AMS", departureAirport: "Amsterdam", flightTime: "2.05", departureTime: "06:00", arrivalTime: "08:20", actualDepartureTime: "06:05", actualArrivalTime: "08:10", airline: "Transavia", aircraftType: "Boeing 737-800", registration: "PH-HXK", age: "2")) {
                                             Text("Flight info")
                                                 .padding()
                                                 .background(Color.secondary)
@@ -94,7 +94,7 @@ struct AirportToAirportView: View {
                                                 
                                         }
                                         
-                                        NavigationLink(destination: AirportView()){
+                                        NavigationLink(destination: AirportInformation()){
                                             Text("Airport info")
                                                 .padding()
                                                 .background(Color.secondary)
