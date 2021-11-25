@@ -20,13 +20,13 @@ struct CloudPaths: View {
                     .padding()
                 
                 CloudPath()
-                    .stroke(.blue, lineWidth: 10)
+                    .stroke(Color.blue, lineWidth: 10)
                 
                 CloudPathTwo()
-                    .stroke(.blue, lineWidth: 10)
+                    .stroke(Color.blue, lineWidth: 10)
                 
                 CloudPathThree()
-                    .stroke(.blue, lineWidth: 10)
+                    .stroke(Color.blue, lineWidth: 10)
                 
                 Image(systemName: "cloud.fill").resizable().foregroundColor(Color.white)
                     .frame(width: 30, height: 30).offset(x: -17, y: -17)
@@ -55,7 +55,7 @@ struct CloudPaths: View {
                         }
                     }
             }
-            .background(Color.cyan)
+            .background(Color.blue)
         } else {
             
             Color.blue
