@@ -9,14 +9,16 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
+        ZStack {
         TabView {
-            FlightView()
+            AirportToAirportView(flightTime: 2.05, aircraftPosition: AircraftPosition(lat: 52.308056, long: 4.764167))
                 .tabItem {
-                Label("Flights", systemImage: "paperplane")
+                Label("Home", systemImage: "house.fill")
             }
+            
             AirlineView()
                 .tabItem {
-                    Label("Airline", systemImage: "briefcase")
+                    Label("Search", systemImage: "magnifyingglass")
                 }
             AirportView()
                 .tabItem {
@@ -25,10 +27,16 @@ struct MainView: View {
             
             UserSettingsView()
                 .tabItem {
-                    Label("Counrty", systemImage: "map")
+                    Label("Settings", systemImage: "person.fill")
                 }
+                
+                .clipShape(Capsule())
+                
         }
+        .opacity(0.7)
         .navigationViewStyle(StackNavigationViewStyle())
+        
+        }
     }
 }
 

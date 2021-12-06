@@ -130,7 +130,7 @@ struct AirportToAirportView: View {
                                 }.padding(.bottom)
             }
             
-        .edgesIgnoringSafeArea(.all)
+        .edgesIgnoringSafeArea(.top)
     }
     .navigationViewStyle(StackNavigationViewStyle())
   }
