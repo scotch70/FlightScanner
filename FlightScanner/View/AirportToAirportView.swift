@@ -103,6 +103,17 @@ struct AirportToAirportView: View {
                                                 .padding(.horizontal)
                                                 
                                         }
+                                        Button(action: actionSheet) {
+                                            HStack {
+                                                Text("Share")
+                                                Image(systemName: "square.and.arrow.up")
+                                            }
+                                            .padding()
+                                            .background(Color.secondary)
+                                            .foregroundColor(.white)
+                                            .cornerRadius(25)
+                                            .padding(.horizontal)
+                                        }
                                        
                                     }
                                         HStack {
@@ -123,6 +134,11 @@ struct AirportToAirportView: View {
     }
     .navigationViewStyle(StackNavigationViewStyle())
   }
+    func actionSheet() {
+            guard let urlShare = URL(string: "https://appstimize.nl") else { return }
+            let activityVC = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
+            UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+    }
 }
 
 struct AirportToAirportView_Previews: PreviewProvider {
