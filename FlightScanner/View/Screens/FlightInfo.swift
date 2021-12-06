@@ -60,12 +60,8 @@ struct FlightInfo: View, Equatable {
                 
             } // aircraft information closing curly bracket
            
-            ZStack {
-            
-        CloudPaths(flag: false)
-                
-        PathView(flag: false, flightTime: "2.15", arrivalAirport: "Barcelona", departureAirport: "Amsterdam")
-         
+            Section(header: Text("Flight details").font(.title)) {
+                Text("Hoi")
             }
         }
         .navigationBarTitle(flightNumber, displayMode: .inline)
