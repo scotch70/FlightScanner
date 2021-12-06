@@ -17,7 +17,6 @@ struct AirportToAirportView: View {
     @State var destinationLocation = CLLocationCoordinate2D(latitude: 41.2974, longitude: 2.0833)
     
     var flightTime: Double
-    let aircraftPosition: AircraftPosition
     @State private var showingButtons = false
     
     @State private var lineCoordinates = [
@@ -28,18 +27,8 @@ struct AirportToAirportView: View {
     var body: some View {
         NavigationView {
             ZStack {
-//                Map(coordinateRegion: $aircraftViewModel.region, showsUserLocation: true, annotationItems: [aircraftPosition]) { place in
-//                    MapAnnotation(coordinate: MapDetails.startingLocation) {
-//                                        Image(systemName: "airplane")
-//                                            .modifier(AirplaneModifier())
-//                    }
-//                }
-            
                 MapView(region: region, requestLocation: $requestLocation, destinationLocation: $destinationLocation, lineCoordinates: lineCoordinates)
-                
-                
-               
-                
+
                 VStack {
                                     Spacer()
                                     VStack(alignment: .trailing) {
@@ -144,7 +133,7 @@ struct AirportToAirportView: View {
 struct AirportToAirportView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-        AirportToAirportView(flightTime: 2.05, aircraftPosition: AircraftPosition(lat: 52.308056, long: 4.764167))
+        AirportToAirportView(flightTime: 2.05)
         }
             
     }

@@ -28,55 +28,14 @@ struct FlightInfo: View, Equatable {
             
             Section(header: Text("Flight information").font(.title)) {
                 HStack {
-                    VStack {
-                        Text(departureIataCode)
-                            .frame(width: 75, height: 55)
-                            .font(.largeTitle)
-                            .background(Color.secondary)
-                            .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
-                        Text(departureAirport)
+                    ScheduledActualView(iataCode: departureIataCode, departureAirport: departureAirport, scheduledTime: departureTime, actualTime: actualDepartureTime)
 
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("Scheduled")
-                                Text(departureTime)
-                                    .font(.title2)
-                            }
-                            HStack {
-                                Text("Actual")
-                                Text("      \(actualDepartureTime)")
-                                    .foregroundColor(actualDepartureTime < departureTime || actualDepartureTime == departureTime ? .green : .red)
-                                    .font(.title2)
-                            }
-                        }
-                    }
-                    .padding()
+                    ScheduledActualView(iataCode: arrivalIataCode, departureAirport: arrivalAirport, scheduledTime: arrivalTime, actualTime: actualArrivalTime)
 
-                    VStack {
-                        Text(arrivalIataCode)
-                            .frame(width: 75, height: 55)
-                            .font(.largeTitle)
-                            .background(Color.secondary)
-                            .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
-                        Text(arrivalAirport)
-
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("Scheduled")
-                                Text(arrivalTime)
-                                    .font(.title2)
-                            }
-                            HStack {
-                                Text("Estimated")
-                                Text(" \(actualArrivalTime)")
-                                    .foregroundColor(actualArrivalTime < arrivalTime || actualArrivalTime == arrivalTime ? .green : .red)
-                                    .font(.title2)
-                            }
-                        }
-                    }
                 }
-            } // flight information closing curly bracket
-//
+            }
+            .padding()
+
             Section(header: Text("Aircraft information").font(.title)) {
                 
                     VStack {
@@ -120,5 +79,39 @@ struct FlightInfo_Previews: PreviewProvider {
         NavigationView {
             FlightInfo(flightNumber: "HV2022", arrivalAirport: "Barcelona", arrivalIataCode: "BCN", departureIataCode: "AMS", departureAirport: "Amsterdam", flightTime: "2.05", departureTime: "06:00", arrivalTime: "08:20", actualDepartureTime: "06:05", actualArrivalTime: "08:10", airline: "Transavia", aircraftType: "Boeing 737-800", registration: "PH-HXK", age: "2")
         }
+    }
+}
+
+struct ScheduledActualView: View {
+    let iataCode: String
+    let departureAirport: String
+    let scheduledTime: String
+    let actualTime: String
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 15).stroke(style: StrokeStyle())
+            VStack {
+                Text(iataCode)
+                    .frame(width: 75, height: 55)
+                    .font(.largeTitle)
+                Text(departureAirport)
+                
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Scheduled")
+                        Text(scheduledTime)
+                            .font(.title2)
+                    }
+                    HStack {
+                        Text("Estimated:")
+                        Text("\(actualTime)")
+                            .foregroundColor(actualTime < scheduledTime || actualTime == scheduledTime ? .green : .red)
+                            .font(.title2)
+                    }
+                }
+            }
+        }
+       
     }
 }
