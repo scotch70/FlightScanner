@@ -29,11 +29,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LogoFlightScanner" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMq-6c-bVp">
-                                <rect key="frame" x="56" y="304" width="322" height="306"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="306" id="Ps4-GP-dax"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="500" verticalHuggingPriority="500" misplaced="YES" image="Logo.001" translatesAutoresizingMaskIntoConstraints="NO" id="Lco-Ag-AVb">
+                                <rect key="frame" x="-44.037974683541506" y="348.72151898735456" width="500.00000000000011" height="200.00000000000011"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
@@ -42,11 +39,10 @@
                         <constraints>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2ZK-hP-xY9"/>
                             <constraint firstAttribute="bottomMargin" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="-14" id="CKK-D0-612"/>
+                            <constraint firstItem="Lco-Ag-AVb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Qtl-jV-l1X"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="45" id="Stn-dK-rhk"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="cMq-6c-bVp" secondAttribute="bottom" constant="252" id="gtL-Gd-zn3"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="iEx-Ja-lSe"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="cMq-6c-bVp" secondAttribute="trailing" constant="36" id="s7R-zF-Yhk"/>
-                            <constraint firstItem="cMq-6c-bVp" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="56" id="yhv-Ck-Sc1"/>
+                            <constraint firstItem="Lco-Ag-AVb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="oxM-Bc-1Fd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -56,7 +52,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoFlightScanner" width="443" height="432"/>
+        <image name="Logo.001" width="1000" height="1000"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
