@@ -15,7 +15,7 @@ struct UserSettingsView: View {
             List {
                 Section(header: Text("User Info")) {
                     ForEach(data.sorted(by: <), id: \.key) { key, value in
-                        HStack(spacing : 10) {
+                        HStack(spacing: 15) {
                             Image(systemName: value)
                                 .font(.subheadline)
                             Text(key)

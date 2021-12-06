@@ -41,7 +41,6 @@
 		F47E956D273D3C48005BEDD3 /* AirplaneModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E956C273D3C48005BEDD3 /* AirplaneModifier.swift */; };
 		F482F2202746ED24004603FB /* CloudPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = F482F21F2746ED24004603FB /* CloudPaths.swift */; };
 		F4A3EBE02735503D00AE9095 /* AircraftLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A3EBDF2735503D00AE9095 /* AircraftLocationViewModel.swift */; };
-		F4A3EBE22735508600AE9095 /* AircraftLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A3EBE12735508600AE9095 /* AircraftLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +80,6 @@
 		F47E956C273D3C48005BEDD3 /* AirplaneModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirplaneModifier.swift; sourceTree = "<group>"; };
 		F482F21F2746ED24004603FB /* CloudPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudPaths.swift; sourceTree = "<group>"; };
 		F4A3EBDF2735503D00AE9095 /* AircraftLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftLocationViewModel.swift; sourceTree = "<group>"; };
-		F4A3EBE12735508600AE9095 /* AircraftLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +164,6 @@
 				A49FE7CA27287AA6000A2786 /* MainView.swift */,
 				A47D7F13270F75C400931366 /* FlightView.swift */,
 				F46B80A5274E35840026708F /* AirportInformation.swift */,
-				F4A3EBE12735508600AE9095 /* AircraftLocation.swift */,
 				F467408B27428B6C005C5495 /* AirportToAirportView.swift */,
 				A49FE7C6272464B4000A2786 /* UserSettingsView.swift */,
 				A4B5052D275E342500BAA075 /* TabMenu */,
@@ -291,7 +288,6 @@
 				F46B80A2274E34F60026708F /* ArrivalAirportScreen.swift in Sources */,
 				A4834A88275E3530007E98BF /* ViewRouter.swift in Sources */,
 				A47D7F14270F75C400931366 /* FlightView.swift in Sources */,
-				F4A3EBE22735508600AE9095 /* AircraftLocation.swift in Sources */,
 				F482F2202746ED24004603FB /* CloudPaths.swift in Sources */,
 				A49FE7C7272464B4000A2786 /* UserSettingsView.swift in Sources */,
 				A47D7F12270F75C400931366 /* FlightScannerApp.swift in Sources */,

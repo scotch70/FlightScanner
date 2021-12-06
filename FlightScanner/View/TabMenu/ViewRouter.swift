@@ -31,7 +31,7 @@ enum TabBarViewModel: Int, CaseIterable {
     var view: some View {
         switch self {
         case .home:
-            return AnyView(AirportToAirportView(flightTime: 2.05, aircraftPosition: AircraftPosition(lat: 4.764167, long: 4.764167)))
+            return AnyView(AirportToAirportView(flightTime: 2.05))
         case .search:
             return AnyView(UserSettingsView())
         case .notifications:
