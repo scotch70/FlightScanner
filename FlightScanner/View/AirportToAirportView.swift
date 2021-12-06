@@ -83,7 +83,7 @@ struct AirportToAirportView: View {
                                                 
                                         }
                                         
-                                        NavigationLink(destination: AirlineView()) {
+                                        NavigationLink(destination: UserSettingsView()) {
                                             Text("Airline info")
                                                 .padding()
                                                 .background(Color.secondary)

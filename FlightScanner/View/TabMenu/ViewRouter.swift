@@ -33,7 +33,7 @@ enum TabBarViewModel: Int, CaseIterable {
         case .home:
             return AnyView(AirportToAirportView(flightTime: 2.05, aircraftPosition: AircraftPosition(lat: 4.764167, long: 4.764167)))
         case .search:
-            return AnyView(AirlineView())
+            return AnyView(UserSettingsView())
         case .notifications:
             return AnyView(UserSettingsView())
         case .account:
