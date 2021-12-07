@@ -47,30 +47,30 @@ struct MenuItem: View {
 }
 
 enum MenuViewModel: Int, CaseIterable {
+    case departue
+    case time
+    case arrival
     case share
-    case save
-    case add
-    case download
     
     var imageName: String {
         switch self {
-        case .share: return "paperplane.fill"
-        case .save: return "bookmark.fill"
-        case .add: return "plus.rectangle.fill.on.rectangle.fill"
-        case .download: return "square.and.arrow.down.fill"
+        case .departue: return "airplane.departure"
+        case .time: return "airplane.circle"
+        case .arrival: return "airplane.arrival"
+        case .share: return "square.and.arrow.up"
         }
     }
     
     var title: String {
         switch self {
+        case .departue:
+            return "Departure"
+        case .time:
+            return "Time"
+        case .arrival:
+            return "Arrival"
         case .share:
             return "Share"
-        case .save:
-            return "Save"
-        case .add:
-            return "Add"
-        case .download:
-            return "Download"
         }
     }
 }
