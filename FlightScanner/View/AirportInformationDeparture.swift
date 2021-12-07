@@ -75,7 +75,6 @@ C = Center
                     
                 }
             }
-            .navigationBarTitle("Airport information", displayMode: .inline)
         } else if showsFact == true {
             VStack {
                 Text(answer)
@@ -90,7 +89,7 @@ C = Center
                         showsAirportInfo = true
                     }
             }
-            .navigationBarTitle("Airport information", displayMode: .inline)
+           
         }
         }
     }

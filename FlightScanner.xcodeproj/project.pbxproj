@@ -41,6 +41,7 @@
 		F4A3EBE02735503D00AE9095 /* AircraftLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A3EBDF2735503D00AE9095 /* AircraftLocationViewModel.swift */; };
 		F4A77A06275F8CC40043AB13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4A77A05275F8CC30043AB13 /* Assets.xcassets */; };
 		F4A77A0A275F9A8C0043AB13 /* AirportInformationArrival.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A77A09275F9A8C0043AB13 /* AirportInformationArrival.swift */; };
+		F4A77A0C275FFF180043AB13 /* AirlineInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A77A0B275FFF180043AB13 /* AirlineInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		F4A3EBDF2735503D00AE9095 /* AircraftLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftLocationViewModel.swift; sourceTree = "<group>"; };
 		F4A77A05275F8CC30043AB13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4A77A09275F9A8C0043AB13 /* AirportInformationArrival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportInformationArrival.swift; sourceTree = "<group>"; };
+		F4A77A0B275FFF180043AB13 /* AirlineInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			children = (
 				F4379D33274544E500E7ACB9 /* FlightInfo.swift */,
 				A412829B27453E9B00D293E5 /* PathView.swift */,
+				F4A77A0B275FFF180043AB13 /* AirlineInformation.swift */,
 				F482F21F2746ED24004603FB /* CloudPaths.swift */,
 				A4EE4BBC2723447A009C857F /* TableCellViewCell.swift */,
 				A44D516E272899A1009DC522 /* AirportDetailView.swift */,
@@ -306,6 +309,7 @@
 				F47E956D273D3C48005BEDD3 /* AirplaneModifier.swift in Sources */,
 				F4A3EBE02735503D00AE9095 /* AircraftLocationViewModel.swift in Sources */,
 				F46B80A6274E35840026708F /* AirportInformationDeparture.swift in Sources */,
+				F4A77A0C275FFF180043AB13 /* AirlineInformation.swift in Sources */,
 				F4A77A0A275F9A8C0043AB13 /* AirportInformationArrival.swift in Sources */,
 				A47D7F37270F7BE900931366 /* FlightScannerViewModel.swift in Sources */,
 			);

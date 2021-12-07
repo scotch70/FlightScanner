@@ -35,6 +35,10 @@ struct FlightInfo: View, Equatable {
                 }
             }
             .padding()
+            
+            Section(header: Text("Airline information").font(.title)) {
+                AirlineInformation(airlineName: "Transavia", founded: "1965", iataCode: "HV", callsign: "TRA", fleet: "39", fleetAge: "12", hubCode: "AMS", country: "The Netherlands", countryPrefix: "NL")
+            }
 
             Section(header: Text("Aircraft information").font(.title)) {
                 

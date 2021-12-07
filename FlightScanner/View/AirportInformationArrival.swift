@@ -29,9 +29,10 @@ C = Center
 """
     
     var body: some View {
+        NavigationView {
         if showsAirportInfo == true {
             VStack {
-                ArrivalAirportScreen(city: "Barcelona", airportName: "El Prat", iataCode: "BCN", country: "Spain", numberOfRunways: 3)  
+                ArrivalAirportScreen(city: "Barcelona", airportName: "El Prat", iataCode: "BCN", country: "Spain", numberOfRunways: 3)
                 Divider()
                 
                 HStack {
@@ -74,7 +75,6 @@ C = Center
                     
                 }
             }
-            .navigationBarTitle("Airport information", displayMode: .inline)
         } else if showsFact == true {
             VStack {
                 Text(answer)
@@ -89,16 +89,17 @@ C = Center
                         showsAirportInfo = true
                     }
             }
-            .navigationBarTitle("Airport information", displayMode: .inline)
+           
+        }
         }
     }
 }
 
+
 struct AirportInformationArrival_Previews: PreviewProvider {
     static var previews: some View {
-        AirportInformationArrival()
         NavigationView {
-        AirportInformationDeparture()
+        AirportInformationArrival()
             .navigationBarTitle("Airport information", displayMode: .inline)
         }
     }
