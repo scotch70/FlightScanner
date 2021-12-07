@@ -19,6 +19,7 @@ struct UserSettingsView: View {
                             Image(systemName: value)
                                 .font(.subheadline)
                             Text(key)
+                                
                         }
                     }
                 }

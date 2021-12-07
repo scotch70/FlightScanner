@@ -18,6 +18,7 @@ struct TableCellViewCell: View {
             label: {
                 HStack {
                     Image(systemName: "\(image)")
+                        .foregroundColor(Color.theme.secondaryText)
                     Text(flightNumber)
                     Spacer()
                     Text(depature)

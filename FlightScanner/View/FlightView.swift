@@ -47,6 +47,7 @@ struct FlightView: View {
                         ForEach(airlineViewModel.airlines) { item in
                             ForEach(item.data) { ita in
                                 Text(ita.airlineName)
+                                    
                             }
                         }
                     }
