@@ -36,25 +36,27 @@ struct MenuItem: View {
                     .padding(12)
                     .frame(width: dimension, height: dimension)
                     .foregroundColor(Color(.white))
-                    
+                
             }
-            Text(viewModel.title)
-                .foregroundColor(.white)
-                .font(.footnote)
+            
+            NavigationLink(destination: viewModel.view) {
+                Text(viewModel.title)
+                    .foregroundColor(.white)
+                    .font(.footnote)
+            }
         }
-    }
         
+    }
 }
-
 enum MenuViewModel: Int, CaseIterable {
-    case departue
+    case departure
     case time
     case arrival
     case share
     
     var imageName: String {
         switch self {
-        case .departue: return "airplane.departure"
+        case .departure: return "airplane.departure"
         case .time: return "airplane.circle"
         case .arrival: return "airplane.arrival"
         case .share: return "square.and.arrow.up"
@@ -63,16 +65,33 @@ enum MenuViewModel: Int, CaseIterable {
     
     var title: String {
         switch self {
-        case .departue:
-            return "Departure"
+        case .departure:
+            return "Depature"
         case .time:
             return "Time"
         case .arrival:
             return "Arrival"
         case .share:
             return "Share"
+            
+            
         }
     }
+    
+    var view: some View {
+        switch self {
+        case .departure:
+            return AnyView(AirportInformationDeparture())
+        case .time:
+            return AnyView(Text("Time"))
+        case .arrival:
+            return AnyView(AirportInformationArrival())
+        case .share:
+            return AnyView(Text("Share"))
+        }
+    }
+    
+    
 }
 
 
