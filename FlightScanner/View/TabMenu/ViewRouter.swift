@@ -35,7 +35,7 @@ enum TabBarViewModel: Int, CaseIterable {
         case .search:
             return AnyView(FlightView())
         case .notifications:
-            return AnyView(AirportInformation())
+            return AnyView(AirportInformationDeparture())
         case .account:
             return AnyView(UserSettingsView())
         }

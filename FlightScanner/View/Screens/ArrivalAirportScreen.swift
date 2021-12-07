@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct ArrivalAirportScreen: View {
-//    var airport = AirportArrival(runways: [Runways(runway: "07L/25R", length: "3743")], city: "Barcelona", airportName: "El Prat", iataCode: "BCN", country: "Spain", numberOfRunways: 3)
-    // overbodig?
-    
     var city: String
     var airportName: String
     var iataCode: String
     var country: String
     var numberOfRunways: Int
+
     
     var runway = [
         Runways(runway: "02/20", length: "2528m"),
@@ -24,6 +22,7 @@ struct ArrivalAirportScreen: View {
     ]
  
     var body: some View {
+        VStack {
         ZStack {
             VStack {
                 Text("Inbound airport information")
@@ -90,6 +89,8 @@ struct ArrivalAirportScreen: View {
         .frame(width: 340, height: 300)
         .background(Color.secondary)
         .clipShape(RoundedRectangle(cornerRadius: 25))
+            
+        }
     }
 }
 

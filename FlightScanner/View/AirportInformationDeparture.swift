@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AirportInformation: View {
+struct AirportInformationDeparture: View {
     @State private var showsFact = false
     @State private var showsQuestion = false
     @State private var showsAirportInfo = true
@@ -47,7 +47,7 @@ C = Center
                     showsQuestion = true
                 }
                 
-                ArrivalAirportScreen(city: "Barcelona", airportName: "El Prat", iataCode: "BCN", country: "Spain", numberOfRunways: 3)
+                AirportDetailView(airportName: "Schiphol", countryName: "The Netherlands", lat: "52.308056", long: "4.764167")
             }
             .navigationBarTitle("Airport information", displayMode: .inline)
         } else if showsQuestion == true {
@@ -97,7 +97,7 @@ C = Center
 struct AirportInformation_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-        AirportInformation()
+        AirportInformationDeparture()
             .navigationBarTitle("Airport information", displayMode: .inline)
         }
     }

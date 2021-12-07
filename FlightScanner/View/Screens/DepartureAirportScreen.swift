@@ -7,11 +7,7 @@
 
 import SwiftUI
 
-struct DepartureAirportScreen: View {
-//    var airport = AirportDeparture(runways: [Runways(runway: "04/22", length: "2410")], city: "Amsterdam", airportName: "Schiphol", iataCode: "AMS", country: "The Netherlands", numberOfRunways: 6)
-    // overbodig?
-    
-    var city: String
+struct DepartureAirportScreen: View {   var city: String
     var airportName: String
     var iataCode: String
     var country: String
@@ -27,6 +23,7 @@ struct DepartureAirportScreen: View {
     ]
  
     var body: some View {
+        VStack {
         ZStack {
             VStack {
                 Text("Outbound airport information")
@@ -93,6 +90,8 @@ struct DepartureAirportScreen: View {
         .frame(width: 340, height: 300)
         .background(Color.secondary)
         .clipShape(RoundedRectangle(cornerRadius: 25))
+            
+        }
     }
 }
 struct DepartureAirportScreen_Previews: PreviewProvider {
