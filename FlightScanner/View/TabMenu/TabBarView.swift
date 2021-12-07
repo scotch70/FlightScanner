@@ -10,11 +10,16 @@ import SwiftUI
 struct TabBarView: View {
     @State private var showMenu = false
     @ObservedObject var router = ViewRouter()
+    @ObservedObject var poprouter = PopUpMenuRouter()
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack {
                 Spacer()
-                router.view
+                if !showMenu {
+                    router.view
+                } else {
+                    poprouter.view
+                }
                 Spacer()
                 
                 HStack {
@@ -35,8 +40,19 @@ struct TabBarView: View {
                 .background(Color(.systemGray5))
             }
             if showMenu {
-                PopUpMenu()
-                    .padding(.bottom, 144)
+                HStack(spacing: 30) {
+                    Spacer()
+                    PopUpIcon(viewModel: .departure, poprouter: poprouter)
+                    PopUpIcon(viewModel: .time, poprouter: poprouter)
+                    PopUpIcon(viewModel: .arrival, poprouter: poprouter)
+                    PopUpIcon(viewModel: .share, poprouter: poprouter)
+                            
+                    Spacer()
+                }
+                .frame(height: UIScreen.main.bounds.height / 8)
+                .padding(.bottom, 144)
+                .transition(.scale)
+                
             }
             
         }
@@ -48,6 +64,40 @@ struct TabBarView: View {
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
         TabBarView()
+    }
+}
+
+struct PopUpIcon: View {
+    let viewModel: MenuViewModel
+    @ObservedObject var poprouter: PopUpMenuRouter
+    let dimension: CGFloat = 48
+    
+    var body: some View {
+        Button {
+            poprouter.currentItem = viewModel
+        } label: {
+            VStack(alignment: .center, spacing: 12) {
+                ZStack {
+                    Circle()
+                        .foregroundColor(Color(.systemBlue))
+                        .frame(width: dimension, height: dimension)
+                        .shadow(radius: 4)
+                    Image(systemName: viewModel.imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding(12)
+                        .frame(width: dimension, height: dimension)
+                        .foregroundColor(Color(.white))
+                    
+                }
+                
+                Text(viewModel.title)
+                    .foregroundColor(.white)
+                    .font(.footnote)
+                
+            }
+            
+        }
     }
 }
 

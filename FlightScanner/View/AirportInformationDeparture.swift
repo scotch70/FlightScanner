@@ -29,6 +29,7 @@ C = Center
 """
     
     var body: some View {
+        NavigationView {
         if showsAirportInfo == true {
             VStack {
                 DepartureAirportScreen(city: "Amsterdam", airportName: "Schiphol", iataCode: "AMS", country: "The Netherlands", numberOfRunways: 6)
@@ -90,6 +91,7 @@ C = Center
                     }
             }
             .navigationBarTitle("Airport information", displayMode: .inline)
+        }
         }
     }
 }
