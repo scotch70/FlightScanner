@@ -35,10 +35,10 @@
 		F46B80A2274E34F60026708F /* ArrivalAirportScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B80A1274E34F50026708F /* ArrivalAirportScreen.swift */; };
 		F46B80A4274E350A0026708F /* DepartureAirportScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B80A3274E350A0026708F /* DepartureAirportScreen.swift */; };
 		F46B80A6274E35840026708F /* AirportInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B80A5274E35840026708F /* AirportInformation.swift */; };
-		F47C007A275E55F600052A21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47C0079275E55F600052A21 /* Assets.xcassets */; };
 		F47E956D273D3C48005BEDD3 /* AirplaneModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E956C273D3C48005BEDD3 /* AirplaneModifier.swift */; };
 		F482F2202746ED24004603FB /* CloudPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = F482F21F2746ED24004603FB /* CloudPaths.swift */; };
 		F4A3EBE02735503D00AE9095 /* AircraftLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A3EBDF2735503D00AE9095 /* AircraftLocationViewModel.swift */; };
+		F4A77A06275F8CC40043AB13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4A77A05275F8CC30043AB13 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,10 +72,10 @@
 		F46B80A1274E34F50026708F /* ArrivalAirportScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalAirportScreen.swift; sourceTree = "<group>"; };
 		F46B80A3274E350A0026708F /* DepartureAirportScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureAirportScreen.swift; sourceTree = "<group>"; };
 		F46B80A5274E35840026708F /* AirportInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportInformation.swift; sourceTree = "<group>"; };
-		F47C0079275E55F600052A21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Model/Assets.xcassets; sourceTree = "<group>"; };
 		F47E956C273D3C48005BEDD3 /* AirplaneModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirplaneModifier.swift; sourceTree = "<group>"; };
 		F482F21F2746ED24004603FB /* CloudPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudPaths.swift; sourceTree = "<group>"; };
 		F4A3EBDF2735503D00AE9095 /* AircraftLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftLocationViewModel.swift; sourceTree = "<group>"; };
+		F4A77A05275F8CC30043AB13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 				A47D7F3A270F7C1E00931366 /* View */,
 				A47D7F35270F7BCF00931366 /* ViewModel */,
 				A47D7F30270F7AF600931366 /* Model */,
-				F47C0079275E55F600052A21 /* Assets.xcassets */,
+				F4A77A05275F8CC30043AB13 /* Assets.xcassets */,
 				A47D7F1A270F75CE00931366 /* Info.plist */,
 				A47D7F17270F75CE00931366 /* Preview Content */,
 			);
@@ -252,7 +252,7 @@
 			files = (
 				A47D7F19270F75CE00931366 /* Preview Assets.xcassets in Resources */,
 				F41A6653275E256200293FE9 /* WelcomeScreen.storyboard in Resources */,
-				F47C007A275E55F600052A21 /* Assets.xcassets in Resources */,
+				F4A77A06275F8CC40043AB13 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
